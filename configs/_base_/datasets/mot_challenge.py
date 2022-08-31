@@ -2,14 +2,20 @@
 dataset_type = 'MOTChallengeDataset'
 data_root = 'data/MOT17/'
 
+file_client_args = dict(
+    backend='petrel',
+    path_mapping=dict({
+        './data/': 's3://openmmlab/datasets/tracking/',
+        'data/': 's3://openmmlab/datasets/tracking/'
+    }))
 # data pipeline
 train_pipeline = [
     dict(
         type='TransformBroadcaster',
         share_random_params=True,
         transforms=[
-            dict(type='LoadImageFromFile'),
-            dict(type='LoadTrackAnnotations', with_instance_id=True),
+            dict(type='LoadImageFromFile', file_client_args=file_client_args),
+            dict(type='LoadTrackAnnotations', with_instance_id=True, file_client_args=file_client_args),
             dict(
                 type='mmdet.RandomResize',
                 scale=(1088, 1088),
@@ -37,8 +43,8 @@ train_pipeline = [
 ]
 
 test_pipeline = [
-    dict(type='LoadImageFromFile'),
-    dict(type='LoadTrackAnnotations', with_instance_id=True),
+    dict(type='LoadImageFromFile', file_client_args=file_client_args),
+    dict(type='LoadTrackAnnotations', with_instance_id=True, file_client_args=file_client_args),
     dict(type='mmdet.Resize', scale=(1088, 1088), keep_ratio=True),
     dict(type='PackTrackInputs', pack_single_img=True)
 ]
