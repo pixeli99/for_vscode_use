@@ -5,8 +5,8 @@ data_root = 'data/ILSVRC/'
 file_client_args = dict(
     backend='petrel',
     path_mapping=dict({
-        './data/': 's3://openmmlab/datasets/tracking/',
-        'data/': 's3://openmmlab/datasets/tracking/'
+        './data/': 'openmmlab:s3://openmmlab/datasets/tracking/',
+        'data/': 'openmmlab:s3://openmmlab/datasets/tracking/'
     }))
 # data pipeline
 train_pipeline = [
