@@ -1,21 +1,15 @@
 # dataset settings
 dataset_type = 'ImagenetVIDDataset'
-data_root = 'data/ILSVRC/'
+data_root = 'openmmlab:s3://openmmlab/datasets/tracking/ILSVRC/'
 
-file_client_args = dict(
-    backend='petrel',
-    path_mapping=dict({
-        './data/': 'openmmlab:s3://openmmlab/datasets/tracking/',
-        'data/': 'openmmlab:s3://openmmlab/datasets/tracking/'
-    }))
 # data pipeline
 train_pipeline = [
     dict(
         type='TransformBroadcaster',
         share_random_params=True,
         transforms=[
-            dict(type='LoadImageFromFile', file_client_args=file_client_args),
-            dict(type='LoadTrackAnnotations', with_instance_id=True, file_client_args=file_client_args),
+            dict(type='LoadImageFromFile', file_client_args=dict(backend='petrel')),
+            dict(type='LoadTrackAnnotations', with_instance_id=True, file_client_args=dict(backend='petrel')),
             dict(type='mmdet.Resize', scale=(1000, 600), keep_ratio=True),
             dict(type='RandomFlip', prob=0.5),
         ]),
@@ -26,7 +20,7 @@ test_pipeline = [
         type='TransformBroadcaster',
         share_random_params=True,
         transforms=[
-            dict(type='LoadImageFromFile', file_client_args=file_client_args),
+            dict(type='LoadImageFromFile', file_client_args=dict(backend='petrel')),
             dict(type='mmdet.Resize', scale=(1000, 600), keep_ratio=True),
         ]),
     dict(type='PackTrackInputs', pack_single_img=False)
