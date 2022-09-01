@@ -1,12 +1,19 @@
 # dataset settings
+file_client_args = dict(
+    backend='petrel',
+    path_mapping=dict({
+        './data/': 'openmmlab:s3://openmmlab/datasets/tracking/',
+        'data/': 'openmmlab:s3://openmmlab/datasets/tracking/'
+    }))
 train_pipeline = [
     dict(
         type='TransformBroadcaster',
         share_random_params=True,
         transforms=[
-            dict(type='LoadImageFromFile'),
+            dict(type='LoadImageFromFile', file_client_args=file_client_args),
             dict(
                 type='LoadTrackAnnotations',
+                file_client_args=file_client_args,
                 with_instance_id=True,
                 with_mask=True,
                 with_bbox=True),
@@ -17,9 +24,10 @@ train_pipeline = [
 ]
 
 test_pipeline = [
-    dict(type='LoadImageFromFile'),
+    dict(type='LoadImageFromFile', file_client_args=file_client_args),
     dict(
         type='LoadTrackAnnotations',
+        file_client_args=file_client_args,
         with_instance_id=True,
         with_mask=True,
         with_bbox=True),

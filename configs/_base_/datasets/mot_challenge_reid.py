@@ -1,14 +1,19 @@
 # dataset settings
 dataset_type = 'ReIDDataset'
 data_root = 'data/MOT17/'
-
+file_client_args = dict(
+    backend='petrel',
+    path_mapping=dict({
+        './data/': 'openmmlab:s3://openmmlab/datasets/tracking/',
+        'data/': 'openmmlab:s3://openmmlab/datasets/tracking/'
+    }))
 # data pipeline
 train_pipeline = [
     dict(
         type='TransformBroadcaster',
         share_random_params=False,
         transforms=[
-            dict(type='LoadImageFromFile', to_float32=True),
+            dict(type='LoadImageFromFile', to_float32=True, file_client_args=file_client_args),
             dict(
                 type='mmdet.Resize',
                 scale=(128, 256),
@@ -19,7 +24,7 @@ train_pipeline = [
     dict(type='PackReIDInputs')
 ]
 test_pipeline = [
-    dict(type='LoadImageFromFile', to_float32=True),
+    dict(type='LoadImageFromFile', to_float32=True, file_client_args=file_client_args),
     dict(type='mmdet.Resize', scale=(128, 256), keep_ratio=False),
     dict(type='PackReIDInputs')
 ]
