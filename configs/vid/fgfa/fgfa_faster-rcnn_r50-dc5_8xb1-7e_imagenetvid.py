@@ -11,7 +11,7 @@ model = dict(
         init_cfg=dict(
             type='Pretrained',
             checkpoint=  # noqa: E251
-            'https://download.openmmlab.com/mmtracking/pretrained_weights/flownet_simple.pth'  # noqa: E501
+            'https://download.openmmlab.sensetime.com/mmtracking/pretrained_weights/flownet_simple.pth'  # noqa: E501
         )),
     aggregator=dict(
         type='EmbedAggregator', num_convs=1, channels=512, kernel_size=3),

@@ -23,7 +23,7 @@ model = dict(
         init_cfg=dict(
             type='Pretrained',
             checkpoint=  # noqa: E251
-            'https://download.openmmlab.com/mmtracking/pretrained_weights/sot_resnet50.model'  # noqa: E501
+            'https://download.openmmlab.sensetime.com/mmtracking/pretrained_weights/sot_resnet50.model'  # noqa: E501
         )),
     neck=dict(
         type='mmdet.ChannelMapper',

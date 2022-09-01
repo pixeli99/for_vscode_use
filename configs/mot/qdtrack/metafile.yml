@@ -27,7 +27,7 @@ Models:
           HOTA: 57.1
           MOTA: 68.2
           IDF1: 68.5
-    Weights: https://download.openmmlab.com/mmtracking/mot/qdtrack/mot_dataset/qdtrack_faster-rcnn_r50_fpn_4e_mot17_20220315_145635-76f295ef.pth
+    Weights: https://download.openmmlab.sensetime.com/mmtracking/mot/qdtrack/mot_dataset/qdtrack_faster-rcnn_r50_fpn_4e_mot17_20220315_145635-76f295ef.pth
 
   - Name: qdtrack_faster-rcnn_r50_fpn_8xb2-4e_crowdhuman-mot17halftrain_test-mot17halfval
     In Collection: QDTrack
@@ -43,7 +43,7 @@ Models:
           HOTA: 59.1
           MOTA: 71.7
           IDF1: 71.6
-    Weights: https://download.openmmlab.com/mmtracking/mot/qdtrack/mot_dataset/qdtrack_faster-rcnn_r50_fpn_4e_crowdhuman_mot17_20220315_163453-68899b0a.pth
+    Weights: https://download.openmmlab.sensetime.com/mmtracking/mot/qdtrack/mot_dataset/qdtrack_faster-rcnn_r50_fpn_4e_crowdhuman_mot17_20220315_163453-68899b0a.pth
 
   - Name: qdtrack_faster-rcnn_r101_fpn_8xb2-24e_lvis_test-tao
     In Collection: QDTrack
@@ -59,7 +59,7 @@ Models:
           AP: 17.2
           AP50: 28.6
           AP75: 17.7
-    Weights: https://download.openmmlab.com/mmtracking/mot/qdtrack/tao_dataset/qdtrack_faster-rcnn_r101_fpn_24e_lvis_20220430_024513-88911daf.pth
+    Weights: https://download.openmmlab.sensetime.com/mmtracking/mot/qdtrack/tao_dataset/qdtrack_faster-rcnn_r101_fpn_24e_lvis_20220430_024513-88911daf.pth
 
   - Name: qdtrack_faster-rcnn_r101_fpn_8xb2-12e_tao
     In Collection: QDTrack
@@ -75,4 +75,4 @@ Models:
           Track AP: 11.0
           Track AP50: 15.8
           Track AP75: 6.1
-    Weights: https://download.openmmlab.com/mmtracking/mot/qdtrack/tao_dataset/qdtrack_faster-rcnn_r101_fpn_12e_tao_20220613_211934-7cbf4062.pth
+    Weights: https://download.openmmlab.sensetime.com/mmtracking/mot/qdtrack/tao_dataset/qdtrack_faster-rcnn_r101_fpn_12e_tao_20220613_211934-7cbf4062.pth

@@ -23,7 +23,7 @@ Models:
         Metrics:
           MOTA: 78.6
           IDF1: 79.2
-    Weights: https://download.openmmlab.com/mmtracking/mot/bytetrack/bytetrack_yolox_x/bytetrack_yolox_x_crowdhuman_mot17-private-half_20211218_205500-1985c9f0.pth
+    Weights: https://download.openmmlab.sensetime.com/mmtracking/mot/bytetrack/bytetrack_yolox_x/bytetrack_yolox_x_crowdhuman_mot17-private-half_20211218_205500-1985c9f0.pth
 
   - Name: bytetrack_yolox_x_8xb4-amp-80e_crowdhuman-mot17halftrain_test-mot17test
     In Collection: ByteTrack
@@ -36,7 +36,7 @@ Models:
         Metrics:
           MOTA: 78.1
           IDF1: 74.8
-    Weights: https://download.openmmlab.com/mmtracking/mot/bytetrack/bytetrack_yolox_x/bytetrack_yolox_x_crowdhuman_mot17-private-half_20211218_205500-1985c9f0.pth
+    Weights: https://download.openmmlab.sensetime.com/mmtracking/mot/bytetrack/bytetrack_yolox_x/bytetrack_yolox_x_crowdhuman_mot17-private-half_20211218_205500-1985c9f0.pth
 
   - Name: bytetrack_yolox_x_8xb4-amp-80e_crowdhuman-mot20train_test-mot20test
     In Collection: ByteTrack
@@ -49,4 +49,4 @@ Models:
         Metrics:
           MOTA: 77.0
           IDF1: 75.4
-    Weights: https://download.openmmlab.com/mmtracking/mot/bytetrack/bytetrack_yolox_x/bytetrack_yolox_x_crowdhuman_mot20-private_20220506_101040-9ce38a60.pth
+    Weights: https://download.openmmlab.sensetime.com/mmtracking/mot/bytetrack/bytetrack_yolox_x/bytetrack_yolox_x_crowdhuman_mot20-private_20220506_101040-9ce38a60.pth

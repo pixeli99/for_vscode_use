@@ -23,7 +23,7 @@ Models:
         Dataset: ImageNet VID
         Metrics:
           box AP@0.5: 70.3
-    Weights: https://download.openmmlab.com/mmtracking/vid/dff/dff_faster_rcnn_r50_dc5_1x_imagenetvid/dff_faster_rcnn_r50_dc5_1x_imagenetvid_20201227_213250-548911a4.pth
+    Weights: https://download.openmmlab.sensetime.com/mmtracking/vid/dff/dff_faster_rcnn_r50_dc5_1x_imagenetvid/dff_faster_rcnn_r50_dc5_1x_imagenetvid_20201227_213250-548911a4.pth
 
   - Name: dff_faster-rcnn_r101-dc5_8xb1-7e_imagenetvid
     In Collection: DFF
@@ -35,7 +35,7 @@ Models:
         Dataset: ImageNet VID
         Metrics:
           box AP@0.5: 73.5
-    Weights: https://download.openmmlab.com/mmtracking/vid/dff/dff_faster_rcnn_r101_dc5_1x_imagenetvid/dff_faster_rcnn_r101_dc5_1x_imagenetvid_20201218_172720-ad732e17.pth
+    Weights: https://download.openmmlab.sensetime.com/mmtracking/vid/dff/dff_faster_rcnn_r101_dc5_1x_imagenetvid/dff_faster_rcnn_r101_dc5_1x_imagenetvid_20201218_172720-ad732e17.pth
 
   - Name: dff_faster-rcnn_x101-dc5_8xb1-7e_imagenetvid
     In Collection: DFF
@@ -47,4 +47,4 @@ Models:
         Dataset: ImageNet VID
         Metrics:
           box AP@0.5: 75.5
-    Weights: https://download.openmmlab.com/mmtracking/vid/dff/dff_faster_rcnn_x101_dc5_1x_imagenetvid/dff_faster_rcnn_x101_dc5_1x_imagenetvid_20210819_095932-0a9e6cb5.pth
+    Weights: https://download.openmmlab.sensetime.com/mmtracking/vid/dff/dff_faster_rcnn_x101_dc5_1x_imagenetvid/dff_faster_rcnn_x101_dc5_1x_imagenetvid_20210819_095932-0a9e6cb5.pth

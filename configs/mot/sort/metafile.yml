@@ -32,4 +32,4 @@ Models:
           MOTA: 62.0
           IDF1: 57.8
           HOTA: 52.0
-    Weights: https://download.openmmlab.com/mmtracking/mot/faster_rcnn/faster-rcnn_r50_fpn_4e_mot17-half-64ee2ed4.pth
+    Weights: https://download.openmmlab.sensetime.com/mmtracking/mot/faster_rcnn/faster-rcnn_r50_fpn_4e_mot17-half-64ee2ed4.pth
